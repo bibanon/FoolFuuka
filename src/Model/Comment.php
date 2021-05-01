@@ -548,7 +548,7 @@ class Comment extends Model
         $num = $this->subnum ? $this->num.'_'.$this->subnum : $this->num;
 
         if (isset($this->comment_factory->backlinks_arr[$num])) {
-            ksort($this->comment_factory->backlinks_arr[$num], SORT_STRING);
+            ksort($this->comment_factory->backlinks_arr[$num], SORT_NATURAL);
             $array = [];
             foreach ($this->comment_factory->backlinks_arr[$num] as $current_p_num_u => $value) {
                 $build_url = $value['build_url'];
